@@ -1,28 +1,89 @@
-# 🌲 Cypress, do Zero à Nuvem ☁️
+# 🚀 Cypress do Zero à Nuvem
 
-👋 Seja bem-vindo(a)!
+Este repositório contém a prática e os exercícios realizados durante o curso **“Cypress do Zero à Nuvem”** da Escola Talking About Testing.  
+O objetivo é aplicar conceitos de automação de testes de ponta a ponta utilizando **Cypress**, integrando boas práticas de desenvolvimento, versionamento de código e execução em nuvem (CI/CD).
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai amar esse curso. ❤️
+---
 
-## O que você vai aprender?
+## 📚 Conceitos aplicados no projeto
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar upload de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
-- Como executar os testes em um _workflow_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como integrar seu _workflow_ de integração contínua com o Cypress Cloud (o serviço de gestão de testes do Cypress na nuvem)
+Durante o curso e neste projeto, foram trabalhados os seguintes pontos:
 
-## Vamos começar?
+- **Configuração do ambiente Cypress**  
+  - Instalação do Cypress via `npm`  
+  - Estrutura básica de diretórios (`e2e`, `fixtures`, `support`)  
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+- **Interações com a aplicação**  
+  - Visitar páginas locais e remotas (`cy.visit`)  
+  - Interação com campos de formulário (inputs, selects, checkboxes, radios, uploads de arquivos)  
+  - Clique em botões e links, incluindo links que abrem em nova aba  
 
-___
+- **Validações (assertions)**  
+  - Uso de **assertions implícitas e explícitas**  
+  - Verificação de conteúdo, visibilidade, estados de campos e mensagens exibidas  
 
-Este é um curso da **Escola Talking About Testing**.
+- **Boas práticas com Cypress**  
+  - Criação de **comandos customizados** para reutilização de código  
+  - Uso de **fixtures** para centralizar dados de teste  
+  - Organização de testes em cenários independentes  
+
+- **Execução em múltiplos ambientes**  
+  - Configuração de diferentes `baseUrl` para rodar localmente ou em produção  
+  - Simulação de diferentes tamanhos de tela (desktop e mobile)  
+
+- **Integração Contínua e Nuvem**  
+  - Configuração de pipeline de testes com **GitHub Actions**  
+  - Execução e relatórios de testes no **Cypress Cloud**  
+
+---
+
+## ⚙️ Como configurar o projeto em um novo computador
+
+Se você clonar este repositório em uma máquina diferente, siga os passos abaixo:
+
+### 1. Pré-requisitos
+
+- **Node.js** instalado (versão 16 ou superior recomendada)  
+  👉 [Download Node.js](https://nodejs.org/)  
+- **npm** ou **yarn** configurado (npm já vem junto com o Node.js)  
+- **Git** instalado para clonar o repositório  
+
+## 2. Clonar o repositório
+```bash
+git clone https://github.com/BernvrdxS/cypress-do-zero-a-nuvem.git cd cypress-do-zero-a-nuvem
+```
+
+## 3. Instalar dependências
+```bash
+npm install
+```
+
+## 4. Executar os testes localmente
+### Abrir a interface interativa do Cypress:
+```bash
+npx cypress open
+```
+
+## Rodar todos os testes em modo headless (linha de comando):
+```bash
+npx cypress run
+```
+
+## Scripts úteis
+No arquivo *package.json* estão configurados os seguintes scripts:
+
+### Rodar o Cypress em modo interativo:
+```bash
+npm run cy:open
+```
+
+### Rodar todos os testes em modo headless:
+```bash
+npm run cy:run
+```
+
+### Executar testes com gravação no Cypress Cloud:
+```bash
+npm run cy:cloud
+```
+
